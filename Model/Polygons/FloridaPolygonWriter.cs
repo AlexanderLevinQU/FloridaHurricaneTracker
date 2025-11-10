@@ -13,6 +13,7 @@ namespace FloridaHurricaneTracker.Model.Polygons
 
         public void CreateFloridaPolygon()
         {
+            //Data for polygon downloaded from https://www2.census.gov/geo/tiger/TIGER2025/STATE/
 
             IConfigurationRoot config = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())

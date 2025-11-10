@@ -10,7 +10,7 @@ namespace FloridaHurricaneTracker.Model.HurricaneInfo
     {
         public DateTime Timestamp { get; set; }
         public bool IsLandFall { get; set; }
-        public bool IsHurricane { get; set; } // Hurricane or tropical storm etc...
+        public bool IsHurricane { get; set; } // Hurricane 
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public double WindSpeed { get; set; }
