@@ -1,22 +1,39 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <UseWPF>true</UseWPF>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
-    <Folder Include="View\" />
-  </ItemGroup>
+	<ItemGroup>
+		<Folder Include="Model\Polygons\StatePolygons\" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.10" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.10" />
-    <PackageReference Include="Nanoid" Version="1.0.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.10" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.10" />
+		<PackageReference Include="Nanoid" Version="1.0.0" />
+		<PackageReference Include="NetTopologySuite" Version="2.6.0" />
+		<PackageReference Include="NetTopologySuite.IO.GeoJSON" Version="4.0.0" />
+		<PackageReference Include="NetTopologySuite.IO.ShapeFile" Version="2.1.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="appsettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="Model\Polygons\StatePolygons\*.*">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="Model\Polygons\tl_2025_us_state\*.*">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="hurdat2.txt">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
 
 </Project>

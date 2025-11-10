@@ -10,8 +10,10 @@ namespace FloridaHurricaneTracker.Model.HurricaneInfo
     {
         public string Id { get; set; }       
         public string Name { get; set; }              
-        public int EntryCount { get; set; }  
-        public List<HurricaneEntry> Entries { get; set; } = new();
+        public List<HurricaneEntry> Entries { get; set; } = new List<HurricaneEntry>();
+        public double MaxWindSpeed { get; set; }
+        public bool HitsFloridaAsHurricane { get; set; }
+        public DateTime TimeStamp { get; set; }
 
     }
 }

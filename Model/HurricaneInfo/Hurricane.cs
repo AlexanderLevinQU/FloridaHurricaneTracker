@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Nanoid;
 
-namespace FloridaHurricaneTracker.Model
+namespace FloridaHurricaneTracker.Model.HurricaneInfo
 {
     internal class Hurricane
     {
@@ -26,7 +26,7 @@ namespace FloridaHurricaneTracker.Model
         //Constructor for hurricane that is typical
         public Hurricane(string name, DateTime date, double windSpeed)
         {
-            Name = $"Hurricane_{name}_{date.ToShortDateString()}";
+            Name = $"Hurricane_{name}_{Nanoid.Nanoid.Generate(size: 5)}"; //Multiple Hurricanes with the same name. Can add id. Could also do date for quick identifier
             Date = date;
             MaxWindSpeed = windSpeed;
         }
