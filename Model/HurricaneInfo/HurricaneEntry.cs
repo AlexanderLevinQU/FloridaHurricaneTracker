@@ -8,6 +8,7 @@ namespace FloridaHurricaneTracker.Model.HurricaneInfo
 {
     internal class HurricaneEntry
     {
+        // each hurricane has multiple entries. Easier to parse
         public DateTime Timestamp { get; set; }
         public bool IsLandFall { get; set; }
         public bool IsHurricane { get; set; } // Hurricane 

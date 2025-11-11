@@ -8,6 +8,7 @@ namespace FloridaHurricaneTracker.Model.HurricaneInfo
 {
     internal class HurricaneCandidate
     {
+        // Candidate that holds all entries. Used to hold values of all entries that may be needed.
         public string Id { get; set; }       
         public string Name { get; set; }              
         public List<HurricaneEntry> Entries { get; set; } = new List<HurricaneEntry>();

@@ -15,15 +15,7 @@ namespace FloridaHurricaneTracker.Model.HurricaneInfo
 
         public Hurricane() { }
 
-        //Constructor for hurricane that is Unamed
-        public Hurricane(DateTime date, double windSpeed)
-        {
-            Date = date;
-            MaxWindSpeed = windSpeed;
-            Name = $"Hurricane_{Nanoid.Nanoid.Generate(size: 5)}_{date.ToShortDateString()}"; 
-        }
-
-        //Constructor for hurricane that is typical
+        //Constructor for hurricane
         public Hurricane(string name, DateTime date, double windSpeed)
         {
             Name = $"Hurricane_{name}_{Nanoid.Nanoid.Generate(size: 5)}"; //Multiple Hurricanes with the same name. Can add id. Could also do date for quick identifier

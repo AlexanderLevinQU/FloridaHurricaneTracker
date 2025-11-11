@@ -52,9 +52,11 @@ namespace FloridaHurricaneTracker.Model
                 {
                     // parse header
                     string[] headerSplit = file[index].Split(',', StringSplitOptions.TrimEntries); //Trim to get rid of extra spaces
-                    if (int.Parse(headerSplit[0].Substring(4)) < 1900)
+                    int? year = int.Parse(headerSplit[0].Substring(4));
+                    if (year != null && year < 1900)
                     {
-                        index += int.Parse(headerSplit[2]) + 1; //can just skip faster. The third number tells how many entries there are
+                        int entries = int.Parse(headerSplit[2]) + 1; //can just skip faster. The third number tells how many entries there are
+                        index += entries;
                         continue;
                     }
 
