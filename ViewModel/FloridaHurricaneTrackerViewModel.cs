@@ -12,12 +12,12 @@ namespace FloridaHurricaneTracker.ViewModel
 {
     internal class FloridaHurricaneTrackerViewModel : ViewModelBase
     {
-        private ObservableCollection<Hurricane> _hurricanes = new ObservableCollection<Hurricane>();
+        private ObservableCollection<Hurricane> _cobjHurricanes = new ObservableCollection<Hurricane>();
 
         public ObservableCollection<Hurricane> Hurricanes
         {
-            get => _hurricanes;
-            set => SetProperty(ref _hurricanes, value);
+            get => _cobjHurricanes;
+            set => SetProperty(ref _cobjHurricanes, value);
         }
 
         public FloridaHurricaneTrackerViewModel()
@@ -25,7 +25,7 @@ namespace FloridaHurricaneTracker.ViewModel
             FloridaPolygonWriter floridaPolygonWriter = new FloridaPolygonWriter(); // Can change this to a polygon writer and be more general
             floridaPolygonWriter.CreateFloridaPolygon();
             HurricaneParser hurricaneParser = new HurricaneParser();
-            _hurricanes = new ObservableCollection<Hurricane> (hurricaneParser.ParseHurricanes());
+            _cobjHurricanes = new ObservableCollection<Hurricane> (hurricaneParser.ParseHurricanes());
         }
 
     }
